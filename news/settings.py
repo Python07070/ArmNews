@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import environ
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -142,3 +143,5 @@ STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 ALLOWED_HOSTS = ['example.com','127.0.0.1']
+
+django_heroku.settings(locals())
