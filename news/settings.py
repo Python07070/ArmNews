@@ -142,6 +142,6 @@ STATICFILES_DIRS = [BASE_DIR / "main/static"]
 STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
-ALLOWED_HOSTS = ['example.com','127.0.0.1']
+ALLOWED_HOSTS = ['news-in-armenia.herokuapp.com','127.0.0.1']
 
 django_heroku.settings(locals())
