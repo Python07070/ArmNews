@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'news',
         'USER': 'postgres',
-        'PASSWORD': 'team2022',
+        'PASSWORD': 'anrI2005',
         'HOST': 'localhost',
         'POST': '',
     }
@@ -132,9 +134,11 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 STATICFILES_DIRS = [BASE_DIR / "main/static"]
 STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 ALLOWED_HOSTS = ['news-in-armenia.herokuapp.com','127.0.0.1']
 
+django_heroku.settings(locals())
